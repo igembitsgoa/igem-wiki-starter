@@ -14,7 +14,7 @@
     </a>
 </p>
 
-# iGEM BITS Goa 2020 Wiki
+# iGEM {{cookiecutter.team}} {% now 'utc', '%Y' %} {{cookiecutter.github_repository}}
 
 ## Docs
 
@@ -25,7 +25,7 @@ Docs: https://github.com/igembitsgoa/wiki/wiki
 ## Quick Start
 
 ```
-git clone https://github.com/igembitsgoa/wiki
+git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.github_repository}}
 cd wiki
 npm install
 npm start

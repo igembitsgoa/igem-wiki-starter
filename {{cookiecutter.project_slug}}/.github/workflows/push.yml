@@ -31,10 +31,9 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
           publish_dir: ./dist
           allow_empty_commit: true
-          external_repository: igembitsgoa/wiki-template
 
       - name: Add Changes to Git
         run: git add src/citations/cache.yml
@@ -48,7 +47,7 @@ jobs:
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
           branch: template
   
   iGEM:
@@ -81,12 +80,12 @@ jobs:
       - name: iGEM WikiSync
         uses: igembitsgoa/wikisync-action@v0.2
         with:
-          team: 'BITSPilani-Goa_India'
+          team: '{{ cookiecutter.team }}'
           source: 'dist'
           build: 'igem'
         env:
-          IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
-          IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
+          IGEM_USERNAME: ${{ '{{' }} secrets.IGEM_USERNAME {{ '}}' }}
+          IGEM_PASSWORD: ${{ '{{' }} secrets.IGEM_PASSWORD {{ '}}' }}
 
       - name: Print Upload Map
         run: cat upload_map.yml
@@ -103,4 +102,4 @@ jobs:
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
