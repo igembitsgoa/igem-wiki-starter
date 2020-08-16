@@ -1,0 +1,66 @@
+include templates/mixins
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title SugarGain | iGEM BITS Goa
+  body
+    include templates/nav.pug
+    header.d-flex.justify-content-center.align-items-center
+      .container
+        .jumbotron
+          h1 Welcome to iGEM 2020!
+          p.lead.
+            Your team has been approved and you are ready to start the iGEM season!
+          hr.my-4
+          p
+            | All the content on this website is based on the 
+            a(href="https://2020.igem.org/Team:Example") example wiki
+            |  and has been used for demonstration only.
+          a.btn.btn-primary.btn-lg(href='Description' role='button') Read more 
+
+    article
+      .container
+        h1 Styling your Wiki
+        p You may style this page as you like or you can simply leave the style as it is. You can easily keep the styling and edit the content of these default wiki pages with your project information and completely fulfill the requirement to document your project.
+        p While you may not win Best Wiki with this styling, your team is still eligible for all other awards. This default wiki meets the requirements, it improves navigability and ease of use for visitors, and you should not feel it is necessary to style beyond what has been provided.
+
+        br
+
+        .row
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--design.jpeg')['default'])
+
+              .card-body
+                h5.card-title Design
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Design') Read more
+
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--model.jpeg')['default'])
+
+              .card-body
+                h5.card-title Model
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Model') Read More
+
+          .col
+            .card(style='width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/Home--human-practices.jpg')['default'])
+
+              .card-body
+                h5.card-title Human Practices
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Human_Practices') Read more
+
+
+    include templates/footer.pug

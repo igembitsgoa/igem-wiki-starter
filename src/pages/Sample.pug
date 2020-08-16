@@ -1,0 +1,142 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Sample"
+    - var tagline = "A sample page for the theme."
+    - var requireMathJax = true
+
+block article
+
+    :markdown-it(html)
+
+        # Headings
+        ## Level 2 Heading
+        ### Level 3 Heading
+        #### Level 4 Heading
+
+        # Emphasis
+        This is regular text.
+
+        **This is bold text.**
+        __This is also bold text.__
+
+        *This is italic text.*
+        _This is also italix text.*
+
+        ***This text is bold and italic both.***
+        ___This text is bold and italic both.___
+
+        ~~Strikethrough~~
+
+        # Lists
+        1. This is item one.
+        1. This is item two.
+        1. It's okay to number every item as 1.
+            * This is a nested list.
+            * Use asterisk for an unordered list,
+            * Further nesting?
+            + Plus sign also works.
+            - And so does minus.
+        1. ~~Birds aren't real.~~
+
+        # Links
+        [Google](https://google.com)
+
+        [Text goes in square brackets](Link-goes-in-parenthesis)
+
+        # Blockquote
+
+        > This is a blockquote.
+        > This continues in the same paragraph.
+        >
+        > To change the paragraph, you have to leave a line.
+
+        > This is another blockquote.
+        > 
+        > **Pranav Ballaney, 2020**
+
+        # Images
+
+        This is a regular paragraph. 
+        #### This is a level 4 heading. 
+        [This is a link](google.com)
+
+    - var imgpath = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    +image(1, imgpath, "Caption", 100)
+
+    :markdown-it(html)
+        Back to regular text.
+
+        # Tables
+
+        This is a regular paragraph, which precedes the table.
+        When you want to insert a table, indent one level back and specify the plugin.
+        Then indent inside again and start writing the table.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | This is | the table | header row |
+        | ------  | --------- | ---------- |
+        | 1       | 2         | 3          |
+        | 4       | 5         | 6          |
+        [Table 1: Caption goes here.]
+
+    :markdown-it(html)
+        And when you're done, go back to the regular markdown filter.
+
+    :markdown-it(html)
+        **Example 2:**
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | Left aligned | Center aligned | Right aligned |
+        | :----------- | :------------: | ------------: |
+        | 1 | 2 | 3 |
+        | 4 | 5 | 6 |
+
+    :markdown-it(html)
+        **Example 3:**
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        |              |          Grouping           ||
+        |First Header  | Second Header | Third Header |
+        | ------------ | :-----------: | -----------: |
+        |Content       |          *Long Cell*        ||
+        |Content       |   **Cell**    |         Cell |                                               
+        |New section   |     More      |[Data](https://google.com) |
+        |And more      | With an escaped '\|'       ||
+
+        [Table 3: Caption goes here.]
+
+    :markdown-it(html)
+
+        # Definitions
+
+        <dfn>Term ~ Definition</dfn>
+
+        This can come <dfn>anywhere in ~ the text</dfn>.
+
+        # MathJax
+
+        $$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
+
+        $$-\frac{\hbar^2}{2m}\nabla^2\psi + V\psi = E\psi$$
+
+        $$i\hbar\gamma^\mu\partial_\mu\psi = mc\psi$$
+
+        $$y_k = \frac{1}{\sqrt{N}}\sum_{n=0}^{N-1}x_n\omega_N^{kn}$$
+
+        # Citations
+
+        In text citation for a research article with a DOI. [Rosano et al., 2019](#citation1)
+
+        In text citation for another research article with a DOI. [Allen & Sheridan, 2015](#citation2)
+
+        In text citation for a book with no DOI. [Ingalls, 2013](#citation3)
+
+        In text citation for a website with institutional author. [TNAU Agritech Portal, n.d.](#citation4)
+
+        In text citation for a website with an author. [Pranav, n.d.](#citation5)
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"authors": "Allen, M. J., & Sheridan, S. C. (2015). ", "doi": "https://doi.org/10.1007/s00484-015-1117-4", "journal": "International Journal of Biometeorology", "numbers": "62(1), 57-67. ", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article"}, {"authors": "Rosano, A., Bella, A., Gesualdo, F., Acampora, A., Pezzotti, P., Marchetti, S., ... & Rizzo, C. (2019). ", "doi": "https://doi.org/10.1016/j.ijid.2019.08.003", "journal": "International Journal of Infectious Diseases", "numbers": "88, 127-134. ", "title": "Investigating the impact of influenza on excess mortality in all ages in Italy during recent seasons (2013/14-2016/17 seasons).", "type": "article"}, {"authors": "Allen, M. J., & Sheridan, S. C. (2015).", "journal": "International Journal of Biometeorology.", "numbers": "62(1), 57-67.", "title": "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model.", "type": "article", "year_published": 2015}, {"details": "(n.d.). Retrieved on June 22, 2020. from ", "title": "Agriculture: Crop production: Sugarcane. TNAU Agritech Portal.", "type": "webpage", "url": "https://google.com"}, {"details": "(March 15, 2019). Retrieved on June 22, 2020. from ", "title": "Agriculture: Crop production: Sugarcane. TNAU Agritech Portal.", "type": "webpage", "url": "https://google.com"}, {"Google_Books_URL": "https://books.google.co.in/books?id=OYr6AQAAQBAJ", "authors": "Ingalls, B. P.", "publisher": "MIT Press.", "title": "Mathematical modeling in systems biology: An introduction.", "type": "book", "year_published": "(2013)."}]

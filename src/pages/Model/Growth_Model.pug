@@ -1,0 +1,105 @@
+extends ../../templates/contents.pug
+
+block headVars
+    - var title = "Growth Model"
+    - var requireMathJax = true
+
+block article
+    :markdown-it(html)
+
+        # Motivation
+
+        Our project rests on the premise that our genetically modified organism — *Escherichia coli*, was able to replicate 
+        and survive in the sugarcane system, at least long enough to serve its purpose. Fortunately, we were able to perform the 
+        experiments required to support these claims in a laboratory setting. As it would have been rather difficult to measure 
+        the growth of *E. coli* directly inside the sugarcane matrix, we extracted the juice from a sugarcane plant and cultured 
+        our bacterium in this medium and performed optical density (OD at 600nm) measurements on the liquid at regular intervals 
+        of time, specifically one hour intervals. This experiment was performed three times, and as a consequence three sets of 
+        optical density measurements were obtained. The averages of the three were calculated and are tabulated below.
+
+        # Experimental Data 
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | **Time Elapsed** (h)      | **Optical Density** (at 600nm)     | 
+        | :-----------:  | :-----------: |
+        | 1            | 0.001         |
+        | 2            | 0.019         |
+        | 3            | 0.050         |                                              
+        | 4            | 0.042         |
+        | 5            | 0.049         |
+        | 6            | 0.059         |
+        | 7            | 0.095         |
+        | 8            | 0.072         |
+        
+        [Table 1: Optical density of the culture at 600nm at different times]
+
+    - var imgpath = "../" + require("../../assets/img/Growth_Model--ODScatterPlot.png")["default"]
+    +image(1, imgpath, "A scatterplot showing the variation of OD versus time")
+
+    :markdown-it(html)
+
+        The optical density was subsequently converted to population size (in the units cfu/mL) using the conversion ratio 
+        \\( 1 \text{OD} \\) = \\( 10^{-6} \text{cfu/mL} \\). Then, the data was converted to the semi-log domain by calculating 
+        the logarithm (base 10) of the optical density data while retaining the time series data as it is.
+
+        # Mathematical Model
+
+        We selected a simple logistic equation to model the growth of the bacteria. At this moment, we would also like to state 
+        that other models — like Gompertz, Stannerd or Richards exist [Zwietering et. al, 1990](#citation1), but we felt that a 
+        logistic model best suited our data and purpose. 
+
+        Developed in 1838 by Belgian mathematician Pierre-François Verhulst, a logistic model makes the assumption that the rate 
+        of population growth is limited and is dependent on the size of the population at any particular instant of time. Specifically, 
+        the rate of growth \\( r \\) is equal to
+
+        $$
+            r = r_0\left(1 - \frac{N}{N_{\text{max}}}\right)
+        $$
+
+        Since the rate of population growth is directly proportional to the population size at that given time [Verhulst, 1838](#citation2), 
+        we obtain the following differential equation governing the growth.
+
+        $$
+            \frac{dN}{dt} = rN
+        $$
+
+        $$
+            \frac{dN}{dt} = r_0 N \left(1 - \frac{N}{N_{\text{max}}}\right)
+        $$
+
+        Here, \\( r_0 \\) is the maximum possible rate of population growth and \\( N_{\text{max}} \\) is the carrying capacity of the medium. 
+        Solving the above ODE, we obtain the following closed-form solution for the population size as a function of time:
+
+        $$
+            N(t) = \frac{N_0N_{\text{max}}}{N_0 + (N_{\text{max}} - N_0)\cdot exp(-r_0 t)}
+        $$
+
+    :markdown-it(html)
+
+        We initially solve the ODE using SciPy's `solve_ivp` method with an initial guess of the parameter \\( r_0 \\) set to 1. 
+        We do not consider the carrying capacity \\( N_{\text{max}} \\) to be a variable parameter and set it to \\( 1 + 10^{-6} \\) times the maximum 
+        population size in the data series obtained from experiment.
+
+        Once a solution is obtained with these parameter values, we run an optimiser using SciPy's `minimize` method to modify the values of the parameter \\( r_0 \\) 
+        to minimise the least-squares sum between the predictions and the actual population size (this serves as the cost function). This process is performed to fit our 
+        growth curve to the data as neatly as possible. Once a minimum value for the parameter \\( r_0 \\) is obtained, we plot the final curve. Fitting the data to our curve, 
+        we obtain the following growth function:
+
+        $$
+            N(t) = \frac{4.9777}{1 + 0.6592\cdot exp(-1.2017t)}
+        $$
+
+    - var imgpath = "../" + require("../../assets/img/Growth_Model--GrowthPrediction.png")["default"]
+    +image(2, imgpath, "A graph of the function that models bacterial growth in the sugarcane.")
+
+    :markdown-it(html)
+        With this model (and experiment), we have shown that our organism is able to survive and replicate within the sugarcane matrix with a nontrivial growth rate and 
+        that it reaches a sufficiently large population size. We have also obtained a closed-form growth function that models the growth of our bacteria in the sugarcane system.
+
+        The codebase for this model can be found [here](https://github.com/igembitsgoa/modelling).
+
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
+
+prepend citations
+    - var citations = [{"authors": "Zwietering, M. H., Jongenburger, I., Rombouts, F. M. & van 't Riet, K. (1990).", "journal": "Applied and environmental microbiology.", "numbers": "56(6), 1875-1881.", "title": "Modeling of the Bacterial Growth Curve.", "type": "article", "year_published": 1990}, {"authors": "Verhulst, Pierre-Fran\u00e7ois. (1838).", "journal": "Correspondance Math\u00e9matique et Physique.", "numbers": "10, 113-121.", "title": "Notice sur la loi que la population poursuit dans son accroissement.", "type": "article", "year_published": 1838}]

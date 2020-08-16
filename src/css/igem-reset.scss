@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/*Adapted from iGEM Peshawar 2016 iGEM Wiki Overrides, used with their Codekit build system*/
+/*Variable for the height of the required iGEM Navbar. Use for sizing your own navbar.
+/* Override iGEM wiki settings, removing everything but the top navbar. */
+#sideMenu,
+#top_title {
+  display: none;
+}
+
+#content {
+  /*Make content behave like one would expect a body to */
+  width: 100vw;
+  padding: 0px;
+  border: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+#globalWrapper {
+  font-size: inherit;
+  padding-bottom: 0;
+}
+
+#top_menu_under {
+  /*Remove spacer between iGEM navbar and content */
+  height: 0px;
+}
+
+ul {
+  list-style-image: none;
+  /* removes the iGEM wiki bullets */
+  padding: 0;
+  margin: 0;
+}
+
+#mw-content-text > p {
+  /*make <p> containing <head> tags invisible */
+  width: 0px;
+  height: 0px;
+}
+
+#igem-navbar-placeholder {
+  /*Placeholder that "subs in" for the iGEM navbar on dev builds */
+  height: 16px;
+  position: fixed;
+  display: block;
+  background-color: #383838;
+  border-bottom: solid black 2px;
+  color: white;
+  z-index: 9999;
+  width: 100%;
+  font-size: 0.75em !important;
+  margin: 0;
+  padding: 0;
+}
+#igem-navbar-placeholder p {
+  margin: 0;
+}
+
+/*MathJax CSS hack to remove annoyning right-side spans (from 2016 Team Peshwar)*/
+.MathJax nobr > span.math > span {
+  border-left-width: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border: 0px !important;
+  overflow: visible;
+}
+
+/* https://gist.github.com/thedeerchild/3893094 */
+// #globalWrapper {
+//   background-color: transparent;
+//   border: none;
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// #content {
+//   background-color: transparent;
+//   border: none;
+//   padding: 0;
+//   margin: 0;
+//   width: 100%;
+//   overflow: visible;
+//   height: 100%;
+// }
+
+// #bodyContent {
+//   border: none;
+//   padding: 0;
+//   margin: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// #top-section {
+//   height: 15px;
+//   margin: 0px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 0 !important;
+//   padding: 0;
+//   border: none;
+//   font-size: 10px;
+// }
+
+// #p-logo {
+//   height: 1px;
+//   overflow: hidden;
+//   display: none;
+// }
+
+// #search-controls {
+//   overflow: hidden;
+//   display: block;
+//   background: none;
+//   position: absolute;
+//   top: 100px;
+//   right: 40px;
+// }
+
+// .left-menu {
+//   width: 500px !important;
+//   display: block;
+//   margin-top: -80px;
+//   border: none;
+//   text-align: right;
+// }
+
+// .left-menu ul {
+//   border: none;
+// }
+
+// #menubar.right-menu {
+//   display: block;
+//   width: 300px;
+//   float: left;
+//   margin-top: 2px;
+//   margin-right: 0px;
+//   border: none;
+// }
+
+// .right-menu ul {
+//   width: 300px;
+//   margin: 0px;
+//   visibility: hidden;
+// }
+
+// .right-menu ul li a {
+//   background: none;
+//   color: #666;
+// }
+
+// .right-menu:hover ul {
+//   visibility: visible;
+// }
+
+// #footer-box {
+//   width: 100%;
+//   margin: -10px auto 0 auto;
+//   padding: 20px 0;
+// }
+
+// .visualClear {
+//   display: none;
+// }
+
+// #footer {
+//   border: none;
+//   width: 965px;
+//   margin: 0 auto;
+//   padding: 0;
+// }
+
+// .firstHeading {
+//   display: none;
+// }
+
+// #f-list a {
+//   color: #333;
+//   font-size: 10px;
+// }
+
+// #f-list a:hover {
+//   color: #666;
+// }
+
+// .printfooter {
+//   display: none;
+// }
+
+// #footer ul {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// #footer ul li {
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   padding: 0;
+// }
+
+// #search-controls {
+//   display: none;
+// }
+
+// h3#siteSub {
+//   display: none;
+// }
+
+// #contentSub {
+//   display: none;
+// }
+
+// p:first-child {
+//   display: none;
+// }
+
+// #catlinks {
+//   display: none;
+// }
+
+// #footer-box {
+//   width: 977px;
+//   margin-bottom: 20px;
+// }

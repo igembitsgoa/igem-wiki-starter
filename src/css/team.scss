@@ -1,0 +1,52 @@
+@import "_main.scss";
+
+
+#themeSwitchWrapper {
+  display: none !important;
+}
+
+header {
+  margin: 10rem 0 0 0;
+  font-family: "Lato", sans-serif;
+
+  h1 {
+    font-weight: 300;
+    font-size: 4.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  p.lead {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+
+  hr {
+    background: #e2e2e3;
+  }
+}
+
+main {
+  margin-top: 4rem;
+
+  .card {
+    background: white;
+    margin: 1.5rem 0.5rem;
+
+    .row {
+      scroll-margin-top: 150px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    display: block; /* remove extra space below image */
+  }
+}

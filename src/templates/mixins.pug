@@ -1,0 +1,82 @@
+- urlPrefix = "/"
+
+mixin buttonLeft(buttonTitle)
+    if buttonTitle.length <= 7
+        - var length = "short"
+    else if buttonTitle.length <= 9
+        - var length = "medium"
+    else if buttonTitle.length <= 11
+        - var length = "long"
+    else
+        - var length = "super-long"
+    if buttonTitle == "Home"
+        - var href = urlPrefix
+    else
+        - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
+    a.button.prev.flex.justify-content-end(class=length
+        href=href)
+        span.circle(aria-hidden=true)
+            span.icon.arrow
+        span.button-text= buttonTitle
+
+mixin buttonRight(buttonTitle)
+    if buttonTitle.length <= 7
+        - var length = "short"
+    else if buttonTitle.length <= 11
+        - var length = "long"
+    else
+        - var length = "super-long"
+    a.button.next(class=length
+        href=urlPrefix + buttonTitle.replace(/ /g,'_'))
+        span.circle(aria-hidden=true)
+            span.icon.arrow
+        span.button-text= buttonTitle
+
+mixin image(n, url, caption, width)
+    .image
+        if width
+            img(src=url alt=caption style="width: " + width + "%")
+        else
+            img(src=url alt=caption)
+        p= "Figure " + n + ": " + caption
+
+mixin imgCitation(name, number)
+    p.text-center
+        a(href="#citation" + number)= name
+
+mixin citation_article(citation, count)
+    // year_published is present in the authors field
+    - scholar = "https://scholar.google.com/scholar?q=" + citation.title
+    li(id= 'citation' + counter)
+        p.author= citation.authors
+        cite= citation.title
+        p
+            span.journalTitle= citation.journal
+            | 
+            span.journalInfo= citation.numbers
+        if citation.doi
+            a.in-text(href=citation.doi target="_blank" rel="noopener") CrossRef
+        a.in-text(href=scholar target="_blank" rel="noopener") Google Scholar
+        a.in-text(href="#intext" + count) Back to text
+
+mixin citation_webpage(citation, count)
+    li(id= 'citation' + count)
+        // date of publication comes with authors/details 
+        // depending on presence of authors
+        // as per APA specifications
+        p.author= citation.authors
+        cite= citation.title
+        p
+            span.details= citation.details
+            a.in-text(href=citation.url target="_blank" rel="noopener")= citation.url
+        a.in-text(href="#intext" + count) Back to text
+
+mixin citation_book(citation, count)
+    li(id= 'citation' + counter)
+        p.author= citation.authors + " " + citation.year_published
+        cite= citation.title
+        p
+            span.details= citation.publisher
+        if citation.Google_Books_URL != ""
+            a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
+        a.in-text(href="#intext" + counter) Back to text    

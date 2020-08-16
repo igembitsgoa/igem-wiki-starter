@@ -1,0 +1,37 @@
+@import "~bootstrap-reboot";
+@import "igem-reset.scss";
+@import "~bootstrap/scss/bootstrap";
+@import "fix-bootstrap.scss";
+@import "_fonts.scss";
+@import "_media_queries.scss";
+@import "_nav.scss";
+@import "_footer.scss";
+
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+// button from
+// https://codepen.io/kathykato/pen/rZRaNe
+
+
+$darkBlue: #2c3e50;
+$darkerBlue: #1E2B37;
+
+a.btn-primary {
+  background: $darkBlue;
+  border-color: $darkBlue;
+  color: white;
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    background: $darkerBlue;
+    outline: none !important;
+    border-color: $darkBlue;
+  }
+}

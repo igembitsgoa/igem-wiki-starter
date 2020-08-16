@@ -1,0 +1,50 @@
+include mixins
+
+html(lang="en")
+  block headVars
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{title} | SugarGain | iGEM BITS Goa
+    if requireMathJax
+      script(src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+  body
+    include nav.pug
+    header.d-flex.justify-content-center.align-items-center
+      .container
+        h1= title
+        p.lead.pl-1= tagline
+        hr.my-4
+
+    main
+      .container
+        .row
+          .sidebar.col-lg-3
+            .nav#contents
+              h5 Contents
+              
+              ul
+                //- Filled automatically from js
+          .content.col-lg-9
+            article
+              block article
+
+            block citations
+            if citations
+              article#references
+                h1 References
+                ol
+                  - counter = 1
+                  each citation in citations
+                    if citation.type == 'article'
+                      +citation_article(citation, counter)
+                    if citation.type == 'webpage'
+                      +citation_webpage(citation, counter)
+                    if citation.type == 'book'
+                      +citation_book(citation, counter)
+                    - counter = counter + 1
+
+    include footer.pug
+
+
+

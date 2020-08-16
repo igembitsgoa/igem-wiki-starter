@@ -1,0 +1,14 @@
+#1
+- article:
+    authors: "Zwietering, M. H., Jongenburger, I., Rombouts, F. M. & van 't Riet, K. "
+    year_published: 1990
+    title: "Modeling of the Bacterial Growth Curve"
+    journal: "Applied and environmental microbiology"
+    numbers: "56(6), 1875-1881."
+#2
+- article:
+    authors: "Verhulst, Pierre-François. "
+    year_published: 1838
+    title: "Notice sur la loi que la population poursuit dans son accroissement"
+    journal: "Correspondance Mathématique et Physique"
+    numbers: "10, 113-121."

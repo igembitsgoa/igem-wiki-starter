@@ -1,0 +1,31 @@
+# 1
+- doi: https://doi.org/10.1007/s00484-015-1117-4
+# 2
+- doi: https://doi.org/10.1016/j.ijid.2019.08.003
+# 3
+- article:
+    authors: "Allen, M. J., & Sheridan, S. C."
+    year_published: 2015
+    title: "Mortality risks during extreme temperature events (ETEs) using a distributed lag non-linear model."
+    journal: "International Journal of Biometeorology"
+    numbers: "62(1), 57-67."
+# 4
+- webpage:
+    title: "Agriculture: Crop production: Sugarcane."
+    accessed: "June 22, 2020"
+    site_name: "TNAU Agritech Portal"
+    url: "https://google.com"
+# 5
+- webpage:
+    published: "March 15, 2019"
+    title: "Agriculture: Crop production: Sugarcane. "
+    accessed: "June 22, 2020"
+    site_name: "TNAU Agritech Portal"
+    url: 'https://google.com'
+# 6
+- book:
+    authors: "Ingalls, B. P."
+    year_published: 2013
+    title: "Mathematical modeling in systems biology: An introduction."
+    publisher: "MIT Press"
+    Google_Books_URL: "https://books.google.co.in/books?id=OYr6AQAAQBAJ"

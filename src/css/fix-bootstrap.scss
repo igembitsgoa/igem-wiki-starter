@@ -1,0 +1,48 @@
+/* Fixes top panel Bootstrap issues. Patch by iGEM Stockholm 2015. Include this stylesheet in your header, after Bootstrap, to restore the original style to the top menu.*/
+
+#top_menu_14,
+#top_menu_under,
+#top_menu_inside {
+  box-sizing: initial;
+}
+
+#top_menu_inside {
+  margin-left: 20px;
+}
+
+#bars_box,
+#menu_BarsBox,
+h5 {
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  line-height: normal;
+}
+
+#menu_BarsBox > h5 {
+  color: rgb(0, 0, 0);
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+.accordion-content li {
+  line-height: 18px;
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+}
+
+.accordion-header,
+.active-header,
+.accordion-header_noaction {
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  color: rgb(101, 100, 89);
+  font-family: Arial, Gadget, sans-serif;
+  font-size: 13.92px;
+  font-weight: bold;
+  line-height: normal;
+  margin: 0;
+}

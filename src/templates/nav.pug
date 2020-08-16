@@ -1,0 +1,36 @@
+
+include nav_list
+include mixins
+
+nav.navbar.navbar-expand-lg.fixed-top
+  .container.d-flex.justify-content-between.w-100
+    a.navbar-brand.d-lg-inline-block(href=urlPrefix)
+      span iGEM 
+      | Wiki
+
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+
+
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav.ml-auto
+        each section in navItems
+          if (typeof section == 'string')
+            li.nav-item
+              a.nav-link(href=urlPrefix + section.replace(/ /g,'_'))= section
+          else
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(id="navbar"+section['section']+"Dropdown" href="#" role="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                | #{section['section']}
+              .dropdown-menu(aria-labelledby="navbar"+section['section']+"Dropdown")
+                each item in section['items']
+                  a.dropdown-item(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
+
+      //- #themeSwitchWrapper.align-items-center
+      //-   i.icon-light
+      //-   #themeSwitch
+      //-     label.switch(for='themeSwitchInput')
+      //-       input(type='checkbox')#themeSwitchInput
+      //-       span.slider.round
+      //-   i.icon-dark

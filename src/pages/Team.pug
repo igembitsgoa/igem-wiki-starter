@@ -1,0 +1,32 @@
+include ../templates/mixins
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Team | SugarGain | iGEM BITS Goa
+  body
+    include ../templates/nav.pug
+    header.d-flex.justify-content-center.align-items-center
+      .container
+        h1 Meet the Team
+        img(src=require('../assets/img/Team.jpg')['default'])
+        p.text-center Photo by Naassom Azevedo on Unsplash
+
+
+    main
+      .container
+        .row.d-flex.justify-content-center
+          each counter2 in [1, 2, 3, 4, 5, 6, 7, 8]
+            .col-xl-3.col-lg-4.col-md-6.col-xs-12
+              .card
+                .card-img-top
+                  img(src=require('../assets/img/Team--member.jpeg')['default'])
+
+                .card-body
+                  h5.card-title Team Member
+                  p.card-text An awesome member of our team!
+
+        p.mr-2.text-right Photo by Bret Kavanaugh on Unsplash
+
+    include ../templates/footer.pug

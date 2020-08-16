@@ -1,0 +1,29 @@
+ 
+name: Integration Test
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      
+      - name: Install and Test
+        run: |
+          npm install
+          npm run test
+
+      - name: Github Fix
+        run: sh utils/github.io_fix.sh
+
+      - name: Preprocess
+        run: npm run prestart
+
+      - name: Build
+        run: npm run build

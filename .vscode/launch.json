@@ -1,0 +1,8 @@
+{
+    "type": "node", 
+    "request": "attach",
+    "name": "Attach",
+    "port": 5858
+}
+// https://stackoverflow.com/questions/41396922/how-to-debug-webpack-config-js-file
+// node --inspect-brk=9229 ./node_modules/webpack/bin/webpack.js --config webpack.config.js --colors
