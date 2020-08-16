@@ -14,7 +14,7 @@
     </a>
 </p>
 
-# iGEM {{cookiecutter.team}} {% now 'utc', '%Y' %} {{cookiecutter.github_repository}}
+# iGEM {{cookiecutter.iGEM_team}} {% now 'utc', '%Y' %} {{cookiecutter.github_repository}}
 
 ## Docs
 
