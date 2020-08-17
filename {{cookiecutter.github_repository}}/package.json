@@ -1,7 +1,7 @@
 {
   "name": "{{ cookiecutter.github_repository }}",
   "version": "1.0.0",
-  "description": "Wiki for iGEM {% now 'utc', '%Y' %} {{ cookiecutter.iGEM_team_code }}",
+  "description": "Wiki for iGEM {% now 'utc', '%Y' %} {{ cookiecutter.iGEM_team_name }}",
   "main": "index.js",
   "scripts": {
     "preprocess": "python3 utils/preprocess.py",
