@@ -1,2 +1,0 @@
-# iGEM Wiki Starter Pack
-
