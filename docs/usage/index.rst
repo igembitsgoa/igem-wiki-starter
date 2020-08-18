@@ -59,6 +59,21 @@ Go to the Description page at ``src/pages/Description.pug`` and also open this p
 
 ``Description.pug`` contains code as shown above. If you look at the code and the rendered version in your browser, you'll notice that the ``.pug`` file contains very little code. Most of it is plain English, yet, the website is rendered eventually as HTML and CSS that your browser can display.
 
+This is because our setup uses filters and loaders to convert Markdown to Pug, which is finally converted to HTML and saved as a file. So let's see how all of this works.
+
+
+Pug Templates
+-------------
+
+The first line of ``src/pages/Description.pug`` is::
+
+    extends ../templates/contents.pug
+
+This means that ``Description.pug`` "extends" ``contents.pug``. So it is somehow based on the contents template.
+
+Open and look at ``src/templates/contents.pug`` now::
+
+
 
 
 
