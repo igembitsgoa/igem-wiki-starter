@@ -4,31 +4,35 @@
 Installation
 ============
 
-WikiSync is a Python package, so it can be installed like any other.
+Quick Start
+-----------
 
-Execute the following at the command line::
+.. code-block:: bash
+
+    pip install cookiecutter
+    cookiecutter gh:igembitsgoa/wiki-starter
+    # You will now be prompted for some inputs.
+    # Project name is one of them, and it is "wiki" by default.
+    cd <project-name>
+    npm install
+    npm start
+
+Detailed Guide
+--------------
+
+.. note::
+    The iGEM Wiki Starter Pack is based on Node.js but some of its functionalities are built using Python. You will need a working Nodejs, Python and pip installation to get started. 
+
+.. # TODO: #1 Add Python, pip and Nodejs installation instructions
+
+The iGEM Wiki Starter Pack is a Cookiecutter template. To set up the starter pack, first install ``cookiecutter`` by executing the following at the command line::
 
     pip install igem-wikisync
 
-WikiSync is supported only on Python 3.5+.
+Now, set it up by running::
 
-We've tested WikiSync on several operating systems across all supported Python versions. However, it's still in development and as we wait for iGEM teams to adopt it and provide feedback, we request you to kindly keep your copy of the software updated. You can do that by running the following command before you use WikiSync.
+    cookiecutter gh:igembitsgoa/wiki-starter
 
-::
-        
-    pip install -U igem-wikisync
+It will now prompt you for your iGEM team name, Github username, the repository where you want your wiki to live, along with your name and email address.
 
-If you don't have ``pip`` installed, please click `here <https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py>`_ for instructions. 
-
-.. .. _known-issues:
-
-.. Known Issues
-.. ------------
-
-.. SSL error:
-
-.. * Check pyopenssl installation with --force-reinstall
-
-.. * Install python3.6 using deadsnakes ppa
-
-.. * Check location of installed pyopenssl without :code:`--force-reinstall` and ensure that the location is present in :code:`$PATH`
+.. # TODO: #2 Add Cookiecutter prompt details 
