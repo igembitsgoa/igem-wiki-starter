@@ -4,5 +4,99 @@
 Usage Guide
 ===========
 
+After installing all the requirements and setting up the starter pack, read on to learn how you can edit the  template and build your wiki using the starter pack.
+
 .. contents:: Table of Contents
+
+Use the Built-in Theme or Build your Own
+----------------------------------------
+
+The starter pack comes with a design template that you can directly use. By editing just the text on each page, you fulfill all the requirements of an iGEM wiki.
+
+The starter pack also makes it really easy to develop your own theme. It completely separates the content of your wiki from its design, so a part of your team can work on the design, while everyone else can just write plain text files with the actual content. 
+
+We'll talk about building your own theme, but first let's see how you can start with the one that comes built-in.
+
+Setting up the Development Server
+---------------------------------
+
+Run the following to start the Webpack server::
+
+    npm start
+
+This will soon open a browser window where you'll see the homepage of your wiki.
+
+This is built out of ``src/index.pug`` so you can go and start playing around with that file. As soon as you make a change and save the file, the page in your browser will automatically refresh and you can see your change there.
+
+``src/index.pug`` will be described in more detail in a later section.
+
+Editing a Standard Page
+-----------------------
+
+Since an iGEM wiki is mostly for documenting a research project, almost all the pages of your wiki will have the same general theme. The homepage and a few others might be different, but we'll come to those later.
+
+Go to the Description page at ``src/pages/Description.pug`` and also open this page in the browser from the navigation menu at the top to see your changes as you edit.
+
+.. code-block:: pug
+
+    extends ../templates/contents.pug
+
+    block headVars
+        - var title = "Project Description"
+        - var tagline = "Describe how and why you chose your iGEM project."
+        - var requireMathJax = false
+
+    block article
+        :markdown-it(html)
+
+            # What should this page contain?
+
+            * A clear and concise description ...
+
+        +image(1, "Description--josh-withers.jpg", "Picture by Josh Withers on Unsplash")
+        
+        ...
+
+``Description.pug`` contains code as shown above. If you look at the code and the rendered version in your browser, you'll notice that the ``.pug`` file contains very little code. Most of it is plain English, yet, the website is rendered eventually as HTML and CSS that your browser can display.
+
+
+
+
+The Structure of the Setup
+--------------------------
+
+As you set up the project, it will include the following files and folders::
+
+ .github/
+ src/
+ utils/
+ .gitignore
+ .travis.yml
+ package.json
+ package-lock.json
+ README.md
+ requirements.txt
+ webpack.common.js
+ webpack.development.js
+ webpack.production.js
+ wikisync.py
+
+The ``src``, ``utils`` and ``.github`` folders contain several files and folders as well, which will be discussed in later sections. So many files and folders might seem overwhelming at first, but this setup will make your life much easier and you'll get used to it in no time.
+
+We will first talk about the ``src`` folder, and then gradually cover all the other files.
+
+The ``src`` folder contains the source files for your wiki. This includes HTML, CSS, JavaScript, images, videos, fonts and everything else you want to add to your wiki.
+
+It contains the following files::
+
+ src/
+    assets/
+    citations/
+    css/
+    js/
+    pages/
+    templates/
+    index.js
+    index.pug
+    nav.yml
 

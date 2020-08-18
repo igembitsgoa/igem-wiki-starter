@@ -25,6 +25,30 @@ The starter pack makes building your wiki as easy as writing plain English and u
 
 Please head over to the :ref:`installation` instructions and :ref:`usage-guide` to get started.
 
+Features
+--------
+
+1. Built-in theme that
+
+   a) Looks great on all devices
+   b) Works with screenreaders and the like
+
+2. Markdown support
+3. Automatic uploads with WikiSync
+4. Extract citation information from DOI
+5. Automatic table of contents on each page
+6. Endless customization with Webpack
+7. Included common web development libraries
+
+   a) Bootstrap
+   b) jQuery
+   c) MathJax
+   d) Font Awesome
+
+8. Extensive templating using Pug
+9. Reset styles on iGEM.org
+
+
 Contribution and Collaboration
 ------------------------------
 
@@ -41,7 +65,6 @@ this Starter Pack has made your iGEM experience easier! For contibuting
 to this software or discussing further collaborations, please reach out 
 to us at igembitsgoa@gmail.com.
 
-.. end-badges
 
 ========
 Contents

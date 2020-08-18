@@ -27,7 +27,7 @@ Detailed Guide
 
 The iGEM Wiki Starter Pack is a Cookiecutter template. To set up the starter pack, first install ``cookiecutter`` by executing the following at the command line::
 
-    pip install igem-wikisync
+    pip install cookiecutter
 
 Now, set it up by running::
 
