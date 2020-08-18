@@ -1,19 +1,17 @@
-==================================================
-Welcome to iGEM Wiki Starter Pack's documentation!
-==================================================
+# iGEM Wiki Starter Pack
 
+<p align="center">
 The iGEM Wiki Starter Pack is the easiest way to create your iGEM Wiki.
+</p>
 
-.. start-badges
 
-.. image:: https://img.shields.io/readthedocs/wiki-starter?logo=Read%20The%20Docs&style=for-the-badge
-    :target: https://wiki-starter.readthedocs.io
-    :alt: Documentation Status
-
-.. image:: https://img.shields.io/pypi/l/igem-wikisync?style=for-the-badge
-    :alt: License: MIT
-
-.. end-badges
+<p align="center">
+   <a href="https://wiki-starter.readthedocs.io">
+      <img src="https://img.shields.io/readthedocs/wiki-starter?logo=Read%20The%20Docs&style=for-the-badge" alt="Documentation Status">
+   </a>
+   <img src="https://img.shields.io/pypi/l/igem-wikisync?style=for-the-badge" alt="License: MIT">
+</p>
+  
 
 This starter pack contains everything you need to build your wiki, and then some. It comes with a great design out of the box, so you can write your wiki in plain English (well, almost - it's Markdown) and it will not only look good on each device, but will also work great with screenreaders and the like. 
 
@@ -23,7 +21,11 @@ It also comes with our Python package, WikiSync, built in, which uploads your en
 
 The starter pack makes building your wiki as easy as writing plain English and uploading, as simple as a ``git push``.
 
-Please head over to the :ref:`installation` instructions and :ref:`usage-guide` to get started.
+Please head over to the installation instructions and the usage guide to get started.
+
+.. warning:: 
+   These docs are currently under development and several sections are incomplete or missing. We're working very hard to put them up as fast as we can, and we'll have a complete draft up here soon.
+   
 
 Features
 --------
@@ -55,12 +57,12 @@ Contribution and Collaboration
 Contributions are welcome, and they are greatly appreciated! Every
 little bit helps, and credit will always be given.
 
-Please visit our :ref:`contributing` page to find out how you can help 
+Please visit our Contributing page to find out how you can help 
 make this project better.
 
 Using this software or submitting issues and pull requests can count 
 towards a collaboration for our teams. Please give us a shoutout at 
-`@igem_bits <https://www.instagram.com/igem_bits>` on Instagram if 
+`@igem_bits <https://www.instagram.com/igem_bits>`_ on Instagram if 
 this Starter Pack has made your iGEM experience easier! For contibuting 
 to this software or discussing further collaborations, please reach out 
 to us at igembitsgoa@gmail.com.
