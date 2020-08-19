@@ -6,11 +6,11 @@ The iGEM Wiki Starter Pack is the easiest way to create your iGEM Wiki.
 
 .. start-badges
 
-.. image:: https://img.shields.io/readthedocs/wiki-starter?logo=Read%20The%20Docs&style=for-the-badge
-    :target: https://wiki-starter.readthedocs.io
+.. image:: https://img.shields.io/readthedocs/igem-wiki-starter?logo=Read%20The%20Docs&style=for-the-badge
+    :target: https://igem-wiki-starter.readthedocs.io
     :alt: Documentation Status
 
-.. image:: https://img.shields.io/pypi/l/igem-wikisync?style=for-the-badge
+.. image:: https://img.shields.io/github/license/igembitsgoa/igem-wiki-starter?style=for-the-badge
     :alt: License: MIT
 
 .. end-badges
