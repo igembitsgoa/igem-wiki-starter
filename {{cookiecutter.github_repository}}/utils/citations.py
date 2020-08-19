@@ -7,8 +7,6 @@ import yaml
 from pathlib import Path
 import string
 
-# TODO: Cache citations
-
 
 def main():
 
