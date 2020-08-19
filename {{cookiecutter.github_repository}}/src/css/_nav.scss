@@ -25,7 +25,7 @@ $navItemHover: #18bc9c;
     span {
       font-weight: 600;
     }
-    
+
     &:hover {
       color: white;
     }
@@ -69,10 +69,10 @@ $navItemHover: #18bc9c;
   .navbar {
     .navbar-brand {
       font-size: 1.5rem;
-    }
 
-    a {
-      font-size: 1rem;
+      a {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -94,11 +94,26 @@ $navItemHover: #18bc9c;
     }
 
     .navbar-collapse {
-      padding: 0 3rem;
+      padding: 0 3rem 1.5rem 3rem;
     }
   }
 }
 
+@include respond-below(xs) {
+  .navbar {
+    .navbar-brand {
+      margin-left: 1rem;
+    }
+
+    button {
+      margin-right: 1rem;
+    }
+
+    .navbar-collapse {
+      padding: 0 1rem 1.5rem 1rem;
+    }
+  }
+}
 
 /**
 Dark Mode Toggle Switch

@@ -20,8 +20,22 @@ header {
     font-weight: 300;
     font-size: 4.5rem;
   }
+}
 
+@include respond-below(lg) {
+  header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
 
+@include respond-below(md) {
+  header {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
 }
 
 /******************************
@@ -62,9 +76,11 @@ article {
 
   .col {
     padding: 1.5rem;
-
   }
-  
+
+  .card {
+    margin: 0 0 1.5rem 0;
+  }
   .card-img-top {
     img {
       width: 100%;

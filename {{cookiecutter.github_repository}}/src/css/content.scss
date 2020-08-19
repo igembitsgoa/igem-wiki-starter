@@ -50,6 +50,21 @@ header {
   }
 }
 
+@include respond-below(lg) {
+  header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include respond-below(md) {
+  header {
+    margin-bottom: 4rem;
+    min-height: unset !important;
+  }
+}
+
 /******************************
 * Main
 ******************************/
@@ -139,9 +154,6 @@ header {
     }
   }
 }
-
-// TODO: Fix citations
-// TODO: Fix citation animation
 
 @keyframes target-fade {
   0% {
@@ -529,6 +541,9 @@ footer {
 @include respond-below(lg) {
   main {
     .content {
+      article {
+        padding: 0;
+      }
       h1 {
         font-size: 2rem;
       }
@@ -587,6 +602,10 @@ footer {
 
       article {
         padding: calc(1.5rem + 0.2vw);
+
+        blockquote {
+          width: 100%;
+        }
       }
     }
   }
