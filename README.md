@@ -37,6 +37,7 @@ Features
 1. Automatic uploads with WikiSync
 1. Extract citation information from DOI
 1. Automatic table of contents on each page
+1. Easy popup definitions
 1. Endless customization with Webpack
 1. Included common web development libraries
    * Bootstrap
