@@ -156,3 +156,13 @@ $(".footer-heading").on("click", function () {
     }
   }
 });
+
+// dark mode
+$('label[for="themeSwitchInput"]').click(function() {
+  if ($("#themeSwitchInput").is(":checked")) {
+      $('body').addClass('dark');
+  }
+  else {
+      $('body').removeClass('dark');
+  }
+}); 

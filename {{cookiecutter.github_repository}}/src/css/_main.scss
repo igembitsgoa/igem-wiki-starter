@@ -15,12 +15,18 @@ html {
   padding: 0;
 }
 
+body {
+  transition: background-color 0.3s ease-out;
+}
+
 // button from
 // https://codepen.io/kathykato/pen/rZRaNe
 
 
 $darkBlue: #2c3e50;
 $darkerBlue: #1E2B37;
+
+$darkBody: #222222;
 
 a.btn-primary {
   background: $darkBlue;
@@ -33,5 +39,24 @@ a.btn-primary {
     background: $darkerBlue;
     outline: none !important;
     border-color: $darkBlue;
+  }
+}
+
+// dark mode
+body.dark {
+  background-color: $darkBody;
+
+  a.btn-primary {
+    background: $navBG-dark;
+    border-color: $navBG-dark;
+    color: white;
+  
+    &:hover,
+    &:focus,
+    &:not(:disabled):not(.disabled):active {
+      background: $darkerBlue;
+      outline: none !important;
+      border-color: $navBG-dark;
+    }
   }
 }

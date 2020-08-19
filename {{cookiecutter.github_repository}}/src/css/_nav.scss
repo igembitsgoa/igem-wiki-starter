@@ -6,6 +6,10 @@ $navBG: #2c3e50;
 $navItem: white;
 $navItemHover: #18bc9c;
 
+$navBG-dark: #375A7F;
+$body-dark: #222222;
+$dropdown-border-dark: rgb(68, 68, 68);
+
 .navbar {
   height: 70px;
   transition: all 0.3s ease, transform 0.5s ease;
@@ -65,37 +69,57 @@ $navItemHover: #18bc9c;
   }
 }
 
-@include respond-below(lg) {
+// dark mode
+body.dark {
   .navbar {
-    .navbar-brand {
-      font-size: 1.5rem;
+    background-color: $navBG-dark
+  }
+  
+  .navbar-collapse {
+    background-color: $navBG-dark;
+  }
 
-      a {
-        font-size: 1rem;
+  .dropdown-menu {
+    background-color: $body-dark;
+    border: 1px solid $dropdown-border-dark;
+    a {
+      color: white;
+
+      &:hover {
+        background-color: $navBG-dark;
+        color: white;
       }
     }
   }
 }
 
-@include respond-below(md) {
+@include respond-below(lg) {
   .navbar {
+    .navbar-brand {
+      font-size: 1.5rem;
+      margin-left: 3rem;
+
+      a {
+        font-size: 1rem;
+      }
+    }
     .container {
       max-width: none;
       height: 100%;
     }
 
-    .navbar-brand {
-      margin-left: 3rem;
-    }
-
     button {
       height: 100%;
-      margin-right: 3rem;
+      margin-right: 11rem;
     }
 
     .navbar-collapse {
       padding: 0 3rem 1.5rem 3rem;
     }
+  }
+  #themeSwitchWrapper {
+    position: absolute;
+    right: 3rem;
   }
 }
 
@@ -106,12 +130,27 @@ $navItemHover: #18bc9c;
     }
 
     button {
-      margin-right: 1rem;
+      margin-right: 9rem;
     }
 
     .navbar-collapse {
       padding: 0 1rem 1.5rem 1rem;
     }
+  }
+  #themeSwitchWrapper {
+    right: 1rem;
+  }
+}
+
+@include respond-below(xxs) {
+  .navbar {
+
+    button {
+      margin-right: 1rem;
+    }
+  }
+  #themeSwitchWrapper {
+    display: none !important;
   }
 }
 
@@ -120,27 +159,12 @@ Dark Mode Toggle Switch
 **/
 
 #themeSwitchWrapper {
-  margin-right: 2rem;
-  align-items: center;
-  padding-top: 5px;
+  margin-left: 1rem;
+  padding-bottom: 20px;
+  height: 20px;
 
-  i {
-    height: 17px;
-    width: 17px;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .icon-dark {
-    background-image: url(../assets/icons/moon.svg);
-    height: 15px;
-    width: 15px;
-  }
-
-  .icon-light {
-    background-image: url(../assets/icons/sun.svg);
+  svg {
+    margin-top: 2px;
   }
 
   #themeSwitch {
@@ -179,17 +203,17 @@ Dark Mode Toggle Switch
       width: 14px;
       left: 3px;
       top: 3px;
-      background-color: white;
+      background-color: $navBG;
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
 
-    input:checked + .slider {
-      background-color: #2196f3;
+    input:checked + .slider:before {
+      background-color: $navBG-dark;
     }
 
     input:focus + .slider {
-      box-shadow: 0 0 1px #2196f3;
+      box-shadow: 0 0 1px $navBG-dark;
     }
 
     input:checked + .slider:before {

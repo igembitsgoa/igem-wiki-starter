@@ -2,13 +2,14 @@
 include nav_list
 include mixins
 
-nav.navbar.navbar-expand-lg.fixed-top
+nav.navbar.navbar-expand-xl.fixed-top
   .container.d-flex.justify-content-between
     a.navbar-brand.d-lg-inline-block(href=urlPrefix)
       span iGEM 
       | {{ cookiecutter.iGEM_team_name }}
 
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' 
+                aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
 
 
@@ -27,10 +28,10 @@ nav.navbar.navbar-expand-lg.fixed-top
                 each item in section['items']
                   a.dropdown-item(href= urlPrefix + item.link.replace(/ /g,'_'))= item.title
 
-      //- #themeSwitchWrapper.align-items-center
-      //-   i.icon-light
-      //-   #themeSwitch
-      //-     label.switch(for='themeSwitchInput')
-      //-       input(type='checkbox')#themeSwitchInput
-      //-       span.slider.round
-      //-   i.icon-dark
+    #themeSwitchWrapper.d-flex
+      i.far.fa-sun
+      #themeSwitch
+        label.switch(for='themeSwitchInput')
+          input(type='checkbox')#themeSwitchInput
+          span.slider.round
+      i.far.fa-moon
