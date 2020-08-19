@@ -23,7 +23,7 @@ def main():
 
     for root, _, files in os.walk('src/citations'):
 
-for filename in files:
+        for filename in files:
 
             # skip cache
             if filename == 'cache.yml':
