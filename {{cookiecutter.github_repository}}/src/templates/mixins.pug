@@ -77,6 +77,10 @@ mixin citation_book(citation, count)
         cite= citation.title
         p
             span.details= citation.publisher
-        if citation.Google_Books_URL != ""
+        if citation.Google_Books_URL && citation.Google_Books_URL != ""
             a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
         a.in-text(href="#intext" + counter) Back to text    
+
+// # TODO: #6 Fix table caption font
+
+// # TODO: #7 Fix citations links font size
