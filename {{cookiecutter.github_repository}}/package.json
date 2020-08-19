@@ -14,7 +14,9 @@
     "start": "webpack-dev-server --config webpack.development.js --open --host 0.0.0.0",
     "build": "webpack --config webpack.production.js",
     "build:all": "npm-run-all prestart build",
-    "postbuild": "python3 utils/postbuild.py"
+    "postbuild": "python3 utils/postbuild.py",
+    "wikisync": "python3.7 wikisync.py",
+    "publish": "npm-run-all build:all wikisync"
   },
   "repository": {
     "type": "git",
