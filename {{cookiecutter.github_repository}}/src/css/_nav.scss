@@ -65,6 +65,41 @@ $navItemHover: #18bc9c;
   }
 }
 
+@include respond-below(lg) {
+  .navbar {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include respond-below(md) {
+  .navbar {
+    .container {
+      max-width: none;
+      height: 100%;
+    }
+
+    .navbar-brand {
+      margin-left: 3rem;
+    }
+
+    button {
+      height: 100%;
+      margin-right: 3rem;
+    }
+
+    .navbar-collapse {
+      padding: 0 3rem;
+    }
+  }
+}
+
+
 /**
 Dark Mode Toggle Switch
 **/
