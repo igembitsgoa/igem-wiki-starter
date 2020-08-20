@@ -44,4 +44,18 @@ Github username is optional, even though we encourage you to keep your wiki unde
 
 Github repository is also the name of the folder that will be created on your computer. You can then link it to a repository on Github and push code there. This will not only help with version control, but also help you process your wiki from the cloud to iGEM servers by using Github Actions or Travis.
 
+Next, go inside the directory that you created (``github_repository``) and execute the following to install Node dependencies::
+
+    npm install
+
+Finally, to install Python dependencies, run this command::
+
+    pip install -r requirements.txt
+
+Installation is complete now and you can start the webpack development server by running::
+
+    npm start
+
+Please send us an email at igembitsgoa@gmail.com if you need any help with installation. 
+
 .. # TODO: #2 Add Cookiecutter prompt details 
