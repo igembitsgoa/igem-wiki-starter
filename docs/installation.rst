@@ -33,12 +33,12 @@ Now, set up the starter pack by running::
 
 It now shows the following prompts: 
 
-    iGEM_team_name: 
-    iGEM_team_code:
-    github_username:
-    github_repository:
-    author:
-    email:
+* ``iGEM_team_name`` 
+* ``iGEM_team_code``
+* ``github_username``
+* ``github_repository``
+* ``author``
+* ``email``
 
 Github username is optional, even though we encourage you to keep your wiki under version control.
 
