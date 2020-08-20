@@ -35,7 +35,7 @@ Features
 1. Built-in theme that
 
    a) Looks great on all devices
-   b) Works with screenreaders and the like
+   b) Comes with a dark mode
 
 2. Markdown support
 3. Automatic uploads with WikiSync

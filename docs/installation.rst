@@ -10,10 +10,8 @@ Quick Start
 .. code-block:: bash
 
     pip install cookiecutter
-    cookiecutter gh:igembitsgoa/wiki-starter
-    # You will now be prompted for some inputs.
-    # Project name is one of them, and it is "wiki" by default.
-    cd <project-name>
+    cookiecutter gh:igembitsgoa/igem-wiki-starter
+    cd <github-repo>
     npm install
     npm start
 
@@ -31,8 +29,19 @@ The iGEM Wiki Starter Pack is a Cookiecutter template. To set up the starter pac
 
 Now, set it up by running::
 
-    cookiecutter gh:igembitsgoa/wiki-starter
+    cookiecutter gh:igembitsgoa/igem-wiki-starter
 
-It will now prompt you for your iGEM team name, Github username, the repository where you want your wiki to live, along with your name and email address.
+It now shows the following prompts: 
+
+    iGEM_team_name: 
+    iGEM_team_code:
+    github_username:
+    github_repository:
+    author:
+    email:
+
+Github username is optional, even though we encourage you to keep your wiki under version control.
+
+Github repository is also the name of the folder that will be created on your computer. You can then link it to a repository on Github and push code there. This will not only help with version control, but also help you process your wiki from the cloud to iGEM servers by using Github Actions or Travis.
 
 .. # TODO: #2 Add Cookiecutter prompt details 
