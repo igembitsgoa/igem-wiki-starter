@@ -27,7 +27,7 @@ The iGEM Wiki Starter Pack is a Cookiecutter template. To set up the starter pac
 
     pip install cookiecutter
 
-Now, set it up by running::
+Now, set up the starter pack by running::
 
     cookiecutter gh:igembitsgoa/igem-wiki-starter
 
