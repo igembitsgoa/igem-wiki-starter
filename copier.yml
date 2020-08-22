@@ -4,7 +4,7 @@ iGEM_team_code:
 iGEM_team_name: 
   type: str
   help: This doesn't necessarily have to be your official team code.
-  default: iGEM_team_code
+  default: "[[ iGEM_team_code ]]"
 github_username:
   type: str
 wiki_folder:
