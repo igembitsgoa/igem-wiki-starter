@@ -1,8 +1,0 @@
-{
-    "iGEM_team_name": "",
-    "iGEM_team_code": "{{ cookiecutter.iGEM_team_name|replace(' ', '_') }}",
-    "github_username": "",
-    "github_repository": "",
-    "author": "",
-    "email": ""
-}
