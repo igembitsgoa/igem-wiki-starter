@@ -13,7 +13,7 @@ The iGEM Wiki Starter Pack is the easiest way to create your iGEM Wiki.
 </p>
   
 
-This starter pack contains everything you need to build your wiki, and then some. It comes with a great design out of the box, so you can write your wiki in plain English (well, almost - it's Markdown) and it will not only look good on each device, but will also work great with screenreaders and the like. 
+This starter pack contains everything you need to build your wiki, and then some. It comes with a great design out of the box, so you can write your wiki in plain English (well, almost - it's Markdown) and it look good on each device. 
 
 It also makes it really easy for you to customize the design, while still making it possible for everyone in your team to write content in Markdown. Along with common web development libraries like Bootstrap, jQuery, MathJax and Font Awesome, it also includes small utilities that automate tasks like adding citations to your wiki. It automatically pulls title, author and publisher information from an article's DOI and includes them at the end of the page. 
 
@@ -35,7 +35,6 @@ Features
 1. Built-in theme that
    * Looks great on all devices
    * Comes with a dark mode
-   * Works with screenreaders and the like
 1. Markdown support
 1. Automatic uploads with WikiSync
 1. Extract citation information from DOI
