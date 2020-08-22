@@ -1,12 +1,14 @@
 iGEM_team_code: 
   type: str
   help: Your official iGEM team code.
+  default: BITSPilani-Goa_India
 iGEM_team_name: 
   type: str
   help: This doesn't necessarily have to be your official team code.
   default: "[[ iGEM_team_code ]]"
 github_username:
   type: str
+  default: igembitsgoa
 wiki_folder:
   type: str
   help: This will be created with the starter pack inside. It's a good idea to keep this the same as your repo on Github.
@@ -14,9 +16,11 @@ wiki_folder:
 author:
   type: str
   help: Your name, just for filling in the metadata.
+  default: Pranav Ballaney
 email:
   type: str
   help: Your email address, also just for filling in the metadata.
+  default: ballaneypranav@gmail.com
 
 
 _subdirectory: src
