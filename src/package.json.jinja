@@ -1,7 +1,7 @@
 {
-  "name": "{{ cookiecutter.github_repository }}",
+  "name": "[[ wiki_folder ]]",
   "version": "1.0.0",
-  "description": "Wiki for iGEM {% now 'utc', '%Y' %} {{ cookiecutter.iGEM_team_name }}",
+  "description": "Wiki for iGEM {% now 'utc', '%Y' %} [[ iGEM_team_name ]]",
   "main": "index.js",
   "scripts": {
     "preprocess": "python3 utils/preprocess.py",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository }}.git"
+    "url": "git+https://github.com/[[ github_username ]]/[[ wiki_folder ]].git"
   },
-  "author": "{{ cookiecutter.author }}",
+  "author": "[[ author ]]",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository }}/issues"
+    "url": "https://github.com/[[ github_username ]]/[[ wiki_folder ]]/issues"
   },
-  "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository }}#readme",
+  "homepage": "https://github.com/[[ github_username ]]/[[ wiki_folder ]]#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.5.2",

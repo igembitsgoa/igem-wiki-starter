@@ -80,7 +80,7 @@ jobs:
       - name: iGEM WikiSync
         uses: igembitsgoa/wikisync-action@v0.2
         with:
-          team: '{{ cookiecutter.iGEM_team_code }}'
+          team: '[[ iGEM_team_code ]]'
           source: 'dist'
           build: 'igem'
         env:

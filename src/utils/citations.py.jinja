@@ -93,9 +93,9 @@ def main():
 
 def etiquette():
 
-    app_name = 'iGEM {{ cookiecutter.iGEM_team_code }} Wiki'
+    app_name = 'iGEM [[ iGEM_team_code ]] Wiki'
     app_version = '0.1'
-    app_url = 'https://{{ cookiecutter.github_username }}.github.io'
+    app_url = 'https://[[ github_username ]].github.io'
     email = '{{ cookiecutter.email }}'
 
     return f"{app_name}/{app_version} ({app_url}; mailto:{email})"
