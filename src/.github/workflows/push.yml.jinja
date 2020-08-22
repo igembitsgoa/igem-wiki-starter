@@ -31,7 +31,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           allow_empty_commit: true
 
@@ -47,7 +47,7 @@ jobs:
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
   
   iGEM:
@@ -84,8 +84,8 @@ jobs:
           source: 'dist'
           build: 'igem'
         env:
-          IGEM_USERNAME: ${{ '{{' }} secrets.IGEM_USERNAME {{ '}}' }}
-          IGEM_PASSWORD: ${{ '{{' }} secrets.IGEM_PASSWORD {{ '}}' }}
+          IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
+          IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
 
       - name: Print Upload Map
         run: cat upload_map.yml
@@ -102,4 +102,4 @@ jobs:
       - name: Push Changes to Github
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
