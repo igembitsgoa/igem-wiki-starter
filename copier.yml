@@ -20,3 +20,4 @@ email:
 
 
 _subdirectory: src
+_templates_suffix: .jinja
