@@ -17,3 +17,6 @@ author:
 email:
   type: str
   help: Your email address, also just for filling in the metadata.
+
+
+_subdirectory: src
