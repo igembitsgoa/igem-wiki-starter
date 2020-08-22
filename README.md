@@ -21,9 +21,12 @@ It also comes with our Python package, WikiSync, built in, which uploads your en
 
 The starter pack makes building your wiki as easy as writing plain English and uploading, as simple as a `git push`.
 
-Please head over to the installation instructions and the usage guide to get started.
+Please head over to the [documentation](https://igem-wiki-starter.readthedocs.io) for installation instructions and a usage guide to get started.
 
-**Note:** These docs are currently under development and several sections are incomplete or missing. We're working very hard to put them up as fast as we can, and we'll have a complete draft up here soon.
+**Note:** These docs are currently under development and some sections are incomplete or missing. We're working to put them up as fast as we can, and we'll have a complete draft up here soon. 
+
+Meanwhile, you can take a look at the documentation we use within our team at https://github.com/igembitsgoa/wiki/wiki. It has almost everything about using the included theme and more information about customization will be put up here soon.
+   
    
 
 Features
