@@ -6,6 +6,10 @@ iGEM_team_name:
   type: str
   help: This doesn't necessarily have to be your official team code.
   default: "[[ iGEM_team_code ]]"
+year: 
+  type: int
+  help: iGEM competition year
+  default: 2020
 github_username:
   type: str
   default: igembitsgoa
