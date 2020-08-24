@@ -9,26 +9,12 @@ year:
   type: int
   help: iGEM competition year
   default: 2020
-github_username:
-  type: str
-  help: This installer will make an initial commit and push.
-github_repository:
-  type: str
-  default: "wiki-[[ year ]]"
-  help: This should already exist as an empty public repository. 
 author:
   type: str
   help: Your name, just for filling in the metadata.
 email:
   type: str
   help: Your email address, also just for filling in the metadata.
-
-_tasks:
-  - git init
-  - git add --all
-  - git commit -m "Initial commit"
-  - "git remote add origin https://github.com/[[ github_username ]]/[[ github_repository ]].git"
-  - git push --set-upstream origin master
 
 
 _subdirectory: src
