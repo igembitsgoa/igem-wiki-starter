@@ -1,7 +1,6 @@
 iGEM_team_code: 
   type: str
   help: Your official iGEM team code.
-  default: BITSPilani-Goa_India
 iGEM_team_name: 
   type: str
   help: This doesn't necessarily have to be your official team code.
@@ -12,20 +11,17 @@ year:
   default: 2020
 github_username:
   type: str
-  default: igembitsgoa
   help: This installer will make an initial commit and push.
 github_repository:
   type: str
-  default: wiki-starter-test
+  default: "wiki-[[ year ]]"
   help: This should already exist as an empty public repository. 
 author:
   type: str
   help: Your name, just for filling in the metadata.
-  default: Pranav Ballaney
 email:
   type: str
   help: Your email address, also just for filling in the metadata.
-  default: ballaneypranav@gmail.com
 
 _tasks:
   - git init
