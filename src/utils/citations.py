@@ -93,12 +93,10 @@ def main():
 
 def etiquette():
 
-    app_name = 'iGEM [[ iGEM_team_code ]] Wiki'
+    app_name = 'iGEM Wiki'
     app_version = '0.1'
-    app_url = 'https://[[ github_username ]].github.io'
-    email = '[[ email ]]'
 
-    return f"{app_name}/{app_version} ({app_url}; mailto:{email})"
+    return f"{app_name}/{app_version}"
 
 
 def parse_DOI(doi, cache):
