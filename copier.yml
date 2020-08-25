@@ -1,10 +1,10 @@
-iGEM_team_code: 
+iGEM_official_team_name: 
   type: str
-  help: Your official iGEM team code.
+  help: Your official iGEM team name.
 iGEM_team_name: 
   type: str
-  help: This doesn't necessarily have to be your official team code.
-  default: "[[ iGEM_team_code ]]"
+  help: Optionally, enter a short name for your team.
+  default: "[[ iGEM_official_team_name ]]"
 year: 
   type: int
   help: iGEM competition year

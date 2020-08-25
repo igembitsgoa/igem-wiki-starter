@@ -45,7 +45,7 @@ Now, set up the starter pack by running::
 
 It now shows the following prompts: 
 
-* ``iGEM_team_code``
+* ``iGEM_official_team_name``
 * ``iGEM_team_name`` 
 * ``year``
 * ``author``
