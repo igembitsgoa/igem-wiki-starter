@@ -7,7 +7,8 @@ Installation
 Quick Start
 -----------
 
-.. code-block:: bash
+
+Installation::
 
     pip install copier
     copier gh:igembitsgoa/igem-wiki-starter wiki
@@ -15,6 +16,15 @@ Quick Start
     npm install
     pip install -r requirements.txt
     npm start
+
+
+Git setup::
+
+    git init
+    git add --all
+    git commit -m "Initial commit"
+    git remote add origin <your Github repository URL>
+    git push --set-upstream origin master
 
 Detailed Guide
 --------------
