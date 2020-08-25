@@ -22,8 +22,6 @@ Detailed Guide
 .. note::
     The iGEM Wiki Starter Pack requires **git, Nodejs, Python and pip** to be installed. Please make sure you have a working installation of all three before starting here. 
 
-    The starter pack sets up your wiki in a Github repository. Please make sure you have an empty Github repository (without any commits, not even a README file) before you begin.
-
 .. # TODO: #1 Add Python, pip and Nodejs installation instructions
 
 
@@ -59,7 +57,9 @@ It is recommended that you set up `version control <https://www.youtube.com/watc
 
 This will not only make development easier, but also allow you to try out your wiki on your github.io URL before uploading it to iGEM servers. Besides, you can set up Github Actions to automatically deploy your wiki directly from Github to iGEM servers. A detailed tutorial on this subject will soon be available here.
 
-To do that, create an empty Github repository and initialize it and set up the remote by executing the following in the folder you have created::
+Setting up version control on your Wiki is necessary for you to recieve updates on the template. This will ensure that as we continue to add features to the Starter Pack, you will be able to integrate them into your wiki.
+
+To set up Git for your wiki, create an empty repository on Github and set it up by executing the following in the folder you have created::
 
     git init
     git add --all
