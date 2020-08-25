@@ -41,6 +41,7 @@ $dropdown-border-dark: rgb(68, 68, 68);
 
   .navbar-collapse {
     background-color: $navBG;
+    transition: all 0.3s ease, transform 0.5s ease;
   }
 
   li {

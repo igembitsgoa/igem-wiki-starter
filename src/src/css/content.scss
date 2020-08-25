@@ -21,9 +21,11 @@ $selection-color: rgba(255, 233, 0, 0.4);
 $darkBlue: #2c3e50;
 $darkerBlue: #1e2b37;
 $linkHover: #18bc9c;
+$tableBorder: #dee2e6;
 
 // dark mode
 $dark-body: #313131;
+$tableBorder-dark: #4e4e4e;
 
 ::selection {
   background-color: $selection-color;
@@ -269,6 +271,7 @@ header {
 
     .MathJax_Display {
       overflow-x: auto;
+      overflow-y: hidden;
     }
 
     span {
@@ -337,24 +340,26 @@ header {
     }
   }
   table {
-    border: 1px solid #dee2e6;
+    border: 1px solid;
+    border-color: $tableBorder;
     width: 100%;
     margin-bottom: 1rem;
-    color: #212529;
     border-collapse: collapse;
 
     thead {
       th,
       td {
         vertical-align: bottom;
-        border-bottom: 2px solid #dee2e6;
+        border-bottom: 2px solid;
+        border-color: $tableBorder;
       }
     }
 
     tbody {
       th,
       td {
-        border: 1px solid #dee2e6;
+        border: 1px solid;
+        border-color: $tableBorder;
       }
     }
 
@@ -366,7 +371,8 @@ header {
     td {
       padding: 0.75rem;
       vertical-align: center;
-      border: 1px solid #dee2e6;
+      border: 1px solid;
+      border-color: $tableBorder;
     }
 
     a {
@@ -381,10 +387,8 @@ header {
       text-align: center;
       font-style: italic;
       margin-top: 15px;
-      font-family: "Merriweather", serif;
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
-      color: #6c757d;
       caption-side: bottom;
     }
   }
@@ -658,8 +662,60 @@ footer {
 }
 
 body.dark {
+  header {
+    color: white;
+  }
+
+  .sidebar {
+    color: white;
+
+    #contents li a {
+      color: white;
+    }
+  }
+
   .content {
-    h1 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    a,
+    strong,
+    p {
+      color: white;
+    }
+
+    table {
+      border-color: $tableBorder-dark;
+      color: white;
+
+      thead {
+        th,
+        td {
+          border-color: $tableBorder-dark;
+        }
+      }
+
+      tbody {
+        th,
+        td {
+          border-color: $tableBorder-dark;
+        }
+      }
+
+      th,
+      td {
+        border-color: $tableBorder-dark;
+      }
+    }
+  }
+
+  #references {
+    cite,
+    a {
       color: white;
     }
   }
