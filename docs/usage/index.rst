@@ -4,7 +4,7 @@
 Usage Guide
 ===========
 
-After installing all the requirements and setting up the starter pack, read on to learn how you can edit the  template and build your wiki using the starter pack.
+After installing all the requirements and setting up the starter pack, read on to learn how you can edit the template and build your wiki using the starter pack.
 
 .. contents:: Table of Contents
 
@@ -71,30 +71,25 @@ The first line of ``src/pages/Description.pug`` is::
 
 This means that ``Description.pug`` "extends" ``contents.pug``. So it is somehow based on the contents template.
 
-Open and look at ``src/templates/contents.pug`` now::
-
-
-
-
 
 The Structure of the Setup
 --------------------------
 
 As you set up the project, it will include the following files and folders::
 
- .github/
- src/
- utils/
- .gitignore
- .travis.yml
- package.json
- package-lock.json
- README.md
- requirements.txt
- webpack.common.js
- webpack.development.js
- webpack.production.js
- wikisync.py
+    .github/
+    src/
+    utils/
+    .gitignore
+    .travis.yml
+    package.json
+    package-lock.json
+    README.md
+    requirements.txt
+    webpack.common.js
+    webpack.development.js
+    webpack.production.js
+    wikisync.py
 
 The ``src``, ``utils`` and ``.github`` folders contain several files and folders as well, which will be discussed in later sections. So many files and folders might seem overwhelming at first, but this setup will make your life much easier and you'll get used to it in no time.
 
@@ -115,3 +110,20 @@ It contains the following files::
     index.pug
     nav.yml
 
+#. ``assets``: Contains all media and documents. Everything other than code.
+
+#. ``citations``: Files corresponding to those in ``pages/`` in case citations are required there.
+
+#. ``css``: CSS code.
+
+#. ``js``: JS code.
+
+#. ``pages``: Files that generate pages like ``/Description`` or ``/Design``.
+
+#. ``templates``: Files that contain code common across all pages, such as navbar, footer and a template for each file in ``pages/``.
+
+#. ``index.js``: Entry point for Webpack. Leave untouched if unfamiliar with it.
+
+#. ``index.pug``: Homepage
+
+#. ``nav.yml``: Navigation menu contents. ``utils/nav.py`` generates a dictionary that is used to create the navigation on each page.  
