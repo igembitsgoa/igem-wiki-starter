@@ -127,3 +127,25 @@ It contains the following files::
 #. ``index.pug``: Homepage
 
 #. ``nav.yml``: Navigation menu contents. ``utils/nav.py`` generates a dictionary that is used to create the navigation on each page.  
+
+
+Building and Deployment
+-----------------------
+
+The starter pack uses Webpack for bunding the assets under ``src/``. All the files in the ``src/`` folder are compiled and bundled into HTML, CSS and JavaScript in a folder called ``dist`` that can be finally uploaded to iGEM servers. 
+
+To do so, run::
+
+    npm run build
+
+outside the ``src/`` folder. A folder called ``dist`` will be created with HTML, CSS and JavaScript files. 
+
+These can be directly uploaded using WikiSync. A Python script called ``wikisync.py`` comes with the starter pack and can be used without any changes. 
+
+WikiSync requires your credentials to be stored as environment variables called ``IGEM_USERNAME`` and ``IGEM_PASSWORD``. More information about this is available with the `documentation for iGEM WikiSync <https://igem-wikisync.readthedocs.io>`_.
+
+After exporting these environment variables, run::
+
+    python3 wikisync.py
+
+to run WikiSync and deploy your wiki to iGEM servers.
