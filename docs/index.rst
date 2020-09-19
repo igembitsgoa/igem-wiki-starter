@@ -83,6 +83,7 @@ Contents
    overview
    installation
    initial_setup
+   usage
    contributing
    authors
    changelog
