@@ -11,7 +11,7 @@ After installing all the requirements and setting up the starter pack, read on t
 Use the Built-in Theme or Build your Own
 ----------------------------------------
 
-The starter pack comes with a design template that you can directly use. By editing just the text on each page, you fulfill all the requirements of an iGEM wiki.
+The starter pack comes with a `design template <https://igembitsgoa.github.io/wiki-starter-demo/>`_ that you can directly use. By editing just the text on each page, you fulfill all the requirements of an iGEM wiki.
 
 The starter pack also makes it really easy to develop your own theme. It completely separates the content of your wiki from its design, so a part of your team can work on the design, while everyone else can just write plain text files with the actual content. 
 
