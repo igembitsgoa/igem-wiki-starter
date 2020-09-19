@@ -62,14 +62,18 @@ Go to the Description page at ``src/pages/Description.pug`` and also open this p
 This is because our setup uses filters and loaders to convert Markdown to Pug, which is finally converted to HTML and saved as a file. So let's see how all of this works.
 
 
-Pug Templates
--------------
+Templates and Pages
+-------------------
 
-The first line of ``src/pages/Description.pug`` is::
+The first line of ``src/pages/Sample.pug`` is::
 
     extends ../templates/contents.pug
 
-This means that ``Description.pug`` "extends" ``contents.pug``. So it is somehow based on the contents template.
+This means that ``Sample.pug`` "extends" ``contents.pug``. In this way, all files in ``pages/`` are based on the ``contents.pug`` template. 
+
+``templates/contents.pug`` and ``pages/Sample.pug`` are described with comments `here <https://gist.github.com/ballaneypranav/3c5594cd6b025af060e9c85f77958ec8>`_. Please leave a comment there in case any clarification is required.
+
+More information about Pug templates is available `here <https://pugjs.org/language/inheritance.html>`_.
 
 
 The Structure of the Setup
@@ -149,3 +153,11 @@ After exporting these environment variables, run::
     python3 wikisync.py
 
 to run WikiSync and deploy your wiki to iGEM servers.
+
+.. 
+    Use the Built-in Theme or Build your Own
+    Setting up the Development Server
+    Editing a Standard Page
+    Pug Templates
+    The Structure of the Setup  
+    Building and Deployment
