@@ -82,7 +82,7 @@ Contents
 
    overview
    installation
-   usage/index
+   initial_setup
    contributing
    authors
    changelog

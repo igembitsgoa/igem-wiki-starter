@@ -1,14 +1,16 @@
-===============
-Getting Started
-===============
+=============
+Initial Setup
+=============
 
-------------
+---------------
+Getting Started
+---------------
+
 Code Editors
 ------------
 
 Unlike traditional text editors (notepad, Word, etc.), code editors contain interface features and functionality that will facilitate and streamline the process of writing your wiki code. For this starter pack we recommend using `VSCode <https://code.visualstudio.com/Download>`_ because it comes pre-packaged with version control, and console access.
 
--------------
 Collaboration
 -------------
 
