@@ -4,9 +4,15 @@
 Usage Guide
 ===========
 
-After installing all the requirements and setting up the starter pack, read on to learn how you can edit the template and build your wiki using the starter pack.
+We've split the Usage Guide into distinct segments according to the organization of a typical iGEM team. 
 
-.. contents:: Table of Contents
+.. toctree::
+   :maxdepth: 2
+   :caption: Table of Contents
+
+   contents
+   theme
+   functionality
 
 Use the Built-in Theme or Build your Own
 ----------------------------------------
