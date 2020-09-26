@@ -46,6 +46,7 @@ The homepage is built out of `src/index.pug` so you can go and start playing aro
 
 `src/index.pug` will be described in more detail in a later section.
 
+-----------------------
 Building and Deployment
 -----------------------
 

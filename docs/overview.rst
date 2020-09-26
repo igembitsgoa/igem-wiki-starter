@@ -12,35 +12,10 @@ In addition to simplifying content and design, the package includes common web d
 
 The package comes built in with WikiSync, a Python software that uploads the entire wiki to the iGEM servers at once with a single command. This eliminates the need to manually name and upload each file, replace each URL, and copy paste the source code for each page into their respective editors. WikiSync integrates effortlessly into automation workflows like GitHub Actions and Travis CI, so content added to the team's wiki repository on GitHub is automatically uploaded to the iGEM servers every time.
 
-Please head over to the :ref:`overview`, :ref:`installation` instructions or :ref:`usage` to get started.
+Please head over to the :ref:`installation` instructions or :ref:`usage` to get started.
 
 .. note:: 
    These docs are currently under development and some sections are incomplete or missing. We're working to put them up as fast as we can, and we'll have a complete draft up here soon. 
 
    Meanwhile, you can take a look at the documentation we use within our team at https://github.com/igembitsgoa/wiki/wiki. It has almost everything about using the included theme and more information about customization will be put up here soon.
    
-
-Features
---------
-
-1. `Built-in theme <https://igembitsgoa.github.io/wiki-starter-demo/>`_ that
-
-   a) Looks great on all devices
-   b) Comes with a dark mode
-
-2. Markdown support
-3. Automatic uploads with WikiSync
-4. Extract citation information from DOI
-5. Automatic table of contents on each page
-6. Endless customization with Webpack
-7. Included common web development libraries
-
-   a) Bootstrap
-   b) jQuery
-   c) MathJax
-   d) Font Awesome
-
-8. Extensive templating using Pug
-9. Reset styles on iGEM.org
-
-
