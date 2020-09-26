@@ -1,5 +1,5 @@
 .. _contents:
 
-================
-Editing Contents
-================
+========
+Contents
+========
