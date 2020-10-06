@@ -75,7 +75,7 @@ Contents
    overview
    installation
    initial_setup
-   usage
+   usage/index
    contributing
    authors
    changelog

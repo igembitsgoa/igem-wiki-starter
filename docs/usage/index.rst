@@ -4,7 +4,7 @@
 Usage Guide
 ===========
 
-We've split the Usage Guide into distinct segments according to the organization of a typical iGEM team. 
+We've split the  Usage Guide into distinct segments according to the organization of a typical iGEM team. 
 
 .. toctree::
    :maxdepth: 2
@@ -72,57 +72,3 @@ It contains the following folders and files::
 8. ``index.pug``: Homepage
 9. ``nav.yml``: Navigation menu contents. ``utils/nav.py`` generates a dictionary that is used to create the navigation on each page.
 
-
-Editing a Standard Page
------------------------
-
-Since an iGEM wiki is mostly for documenting a research project, almost all the pages of your wiki will have the same general theme. The homepage and a few others might be different, but we'll come to those later.
-
-Go to the Description page at ``src/pages/Description.pug`` and also open this page in the browser from the navigation menu at the top to see your changes as you edit.
-
-.. code-block:: pug
-
-    extends ../templates/contents.pug
-
-    block headVars
-        - var title = "Project Description"
-        - var tagline = "Describe how and why you chose your iGEM project."
-        - var requireMathJax = false
-
-    block article
-        :markdown-it(html)
-
-            # What should this page contain?
-
-            * A clear and concise description ...
-
-        +image(1, "Description--josh-withers.jpg", "Picture by Josh Withers on Unsplash")
-        
-        ...
-
-``Description.pug`` contains code as shown above. If you look at the code and the rendered version in your browser, you'll notice that the ``.pug`` file contains very little code. Most of it is plain English, yet, the website is rendered eventually as HTML and CSS that your browser can display.
-
-This is because our setup uses filters and loaders to convert Markdown to Pug, which is finally converted to HTML and saved as a file. So let's see how all of this works.
-
-
-Templates and Pages
--------------------
-
-The first line of ``src/pages/Sample.pug`` is::
-
-    extends ../templates/contents.pug
-
-This means that ``Sample.pug`` "extends" ``contents.pug``. In this way, all files in ``pages/`` are based on the ``contents.pug`` template. 
-
-``templates/contents.pug`` and ``pages/Sample.pug`` are described with comments `here <https://gist.github.com/ballaneypranav/3c5594cd6b025af060e9c85f77958ec8>`_. Please leave a comment there in case any clarification is required.
-
-More information about Pug templates is available `here <https://pugjs.org/language/inheritance.html>`_.
-
-
-.. 
-    Use the Built-in Theme or Build your Own
-    Setting up the Development Server
-    Editing a Standard Page
-    Pug Templates
-    The Structure of the Setup  
-    Building and Deployment
