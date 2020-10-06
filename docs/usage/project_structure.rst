@@ -30,6 +30,7 @@ Two more folders will be created here as you work on your wiki.
 
 We will first talk about the ``src`` folder, and then gradually cover the rest.
 
+------------------
 The ``src`` Folder
 ------------------
 
@@ -58,3 +59,16 @@ It contains the following folders and files::
 8. ``index.pug``: Homepage
 9. ``nav.yml``: Navigation menu contents. ``utils/nav.py`` generates a dictionary that is used to create the navigation on each page.
 
+-------------------
+Templates and Pages
+-------------------
+
+The first line of ``src/pages/Sample.pug`` is::
+
+    extends ../templates/contents.pug
+
+This means that ``Sample.pug`` "extends" ``contents.pug``. In this way, all files in ``pages/`` are based on the ``contents.pug`` template. 
+
+``templates/contents.pug`` and ``pages/Sample.pug`` are described with comments `here <https://gist.github.com/ballaneypranav/3c5594cd6b025af060e9c85f77958ec8>`_. Please leave a comment there in case any clarification is required.
+
+More information about Pug templates is available `here <https://pugjs.org/language/inheritance.html>`_.
