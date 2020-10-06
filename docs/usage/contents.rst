@@ -35,18 +35,16 @@ The structure of ``Sample.pug`` looks something like this::
 
 So there are six major sections, which are described in more detail below. The most important thing to notice is the indentation of various code blocks. Please keep that in mind as you read the guide.
 
-extends ../templates/contents.pug
-   As described above, this just says that ``Sample.pug`` is based on the ``contents.pug`` template.
+``extends ../templates/contents.pug
+    As described above, this just says that ``Sample.pug`` is based on the ``contents.pug`` template.
 
-block headVars
+``block headVars``
     This section contains the title of the page, a summary and a variable which denotes whether MathJax is required on this page or not.You can change these variables and use them as you like in ``contents.pug``.
 
 ``block article``
-   This is the main body of the page, where all the content lives. The structure of this section follows markdown syntax, which has been described in the next section.
+    This is the main body of the page, where all the content lives. The structure of this section follows markdown syntax, which has been described in the next section.
 
 ``//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.``
-
 ``prepend citations``
-
-This section will contain citations taken from the ``citations/`` folder. This is described later and can be ignored for now. Everything you add manually in this section will be overwritten with citations. If you create any custom elements, make sure they're above the ``DO NOT MODIFY`` line.
+    This section will contain citations taken from the ``citations/`` folder. This is described later and can be ignored for now. Everything you add manually in this section will be overwritten with citations. If you create any custom elements, make sure they're above the ``DO NOT MODIFY`` line.
 
