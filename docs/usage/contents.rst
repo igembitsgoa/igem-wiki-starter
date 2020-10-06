@@ -257,9 +257,10 @@ In-text Citations
 
 In-text citations work just like links, but are formatted differently automatically. Take a look at `Sample.pug <https://github.com/igembitsgoa/igem-wiki-starter/blob/master/src/src/pages/Sample.pug>`_ and `the published page <https://igembitsgoa.github.io/wiki-starter-demo/Sample/>`_ to get an idea of how this works.
 
-.. code-block:: pug
+.. code-block::
 
     :markdown-it(html)
+       
         In text citation for a research article with a DOI. [Rosano et al., 2019](#citation1)
 
         In text citation for another research article with a DOI. [Allen & Sheridan, 2015](#citation2)
