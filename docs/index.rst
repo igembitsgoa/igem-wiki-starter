@@ -17,12 +17,6 @@ The iGEM Wiki Starter Pack is the easiest way to create your iGEM Wiki.
 
 Please head over to the :ref:`overview`, :ref:`installation` instructions or :ref:`usage` to get started.
 
-.. note:: 
-   These docs are currently under development and some sections are incomplete or missing. We're working to put them up as fast as we can, and we'll have a complete draft up here soon. 
-
-   Meanwhile, you can take a look at the documentation we use within our team at https://github.com/igembitsgoa/wiki/wiki. It has almost everything about using the included theme and more information about customization will be put up here soon.
-   
-
 Features
 --------
 
